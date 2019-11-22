@@ -1,0 +1,67 @@
+.AdressBlock {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 500px;
+    max-width: 95vw;
+    box-sizing: border-box;
+    padding: 2px;
+
+    border-top: 1px solid #ddd;
+
+    .adress {
+        flex: auto 1 1;
+        max-width: 60vw;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 5px;
+        transform: scale(1);
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .adress:hover {
+        transform: scale(1.01);
+        background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 90%, rgba(255,255,255,0) 100%);
+        color: #eee;
+    }
+
+    i {
+        font-size: 1.3em;
+        transform: scale(1);
+        margin: 5px;
+        color: #bbb;
+        cursor: pointer;
+    }
+
+    i:hover {
+        transform: scale(1.05);
+        color: #fc3a3a;
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+
+.AdressBlock:first-of-type {
+    border-top: none;
+}
+
+@media (min-width: 1000px) {
+    .AdressBlock {
+        width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .AdressBlock {
+        .icons {
+            width: 50px;
+            i {
+                font-size: 1.3;
+                transform: scale(1);
+            }
+        }
+    }
+}
